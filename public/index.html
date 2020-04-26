@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wakanda Forever</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/7.14.2/firebase-auth.js"></script>
+    <script src="/__/firebase/7.14.2/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <meta name="google-signin-client_id" content="project-239297078868.apps.googleusercontent.com">
+</head>
+
+<script>
+    getDisplay = () => {
+        if (screen.width < 700) {
+            window.location = "mobile.html"
+        }
+    }
+    getDisplay()
+
+</script>
+<div class="asthetic">
+    <div class="wave2 move"></div>
+    <div class="backdropVideo" alt="senic view of forests">
+        <video preload="auto" autoplay loop muted>
+            <source src="resources/videos/back5.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="mainTxt">IT IS A SAMPLE TEXT</div>
+
+</div>
+
+<body>
+
+    <div class="login container">
+        <img>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="example@site.com" autofocus>
+        </div>
+        <div>
+            <label for="pass"> Password</label>
+            <input id="pass" type="password" placeholder="password">
+        </div>
+        <button class="loginbtn">Login</button>
+        <span>or</span>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+</body>
+<script src="/__/firebase/init.js"></script>
+</html>
