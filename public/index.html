@@ -14,8 +14,8 @@
     <!-- Add Firebase products that you want to use -->
     <script src="/__/firebase/7.14.2/firebase-auth.js"></script>
     <script src="/__/firebase/7.14.2/firebase-firestore.js"></script>
-    <script src="/__/firebase/init.js"></script>
-    <meta name="google-signin-client_id" content="project-239297078868.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+        content="239297078868-i5t67q1eekela8d19mlo03cfl6c9p8rq.apps.googleusercontent.com">
 </head>
 
 <script>
@@ -43,17 +43,21 @@
     <div class="login container">
         <img>
         <div>
-            <label for="email">Email</label>
+            <label for="email" class="formlabel">Email</label>
             <input id="email" type="email" placeholder="example@site.com" autofocus>
         </div>
         <div>
-            <label for="pass"> Password</label>
+            <label for="pass" class="formlabel"> Password</label>
             <input id="pass" type="password" placeholder="password">
         </div>
         <button class="loginbtn">Login</button>
-        <span>or</span>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <span class="formlabel">or</span>
+        <div class="googlebtn">
+            <div class="g-signin2" data-onsuccess="onSignIn">Google Login</div>
+        </div>
     </div>
 </body>
+<script src="scripts/index.js"></script>
 <script src="/__/firebase/init.js"></script>
+
 </html>

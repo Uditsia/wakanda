@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wakanda Forever</title>
+    <link rel="stylesheet" href="styles/interaction.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/7.14.2/firebase-auth.js"></script>
+    <script src="/__/firebase/7.14.2/firebase-firestore.js"></script>
+    <script src="https://kit.fontawesome.com/35c1de7e70.js" crossorigin="anonymous"></script>
+    <meta name="google-signin-client_id"
+        content="239297078868-i5t67q1eekela8d19mlo03cfl6c9p8rq.apps.googleusercontent.com">
+</head>
+
+<script>
+    getDisplay = () => {
+        if (screen.width < 700) {
+            window.location = "mobileinteraction.html"
+        }
+    }
+    getDisplay()
+
+</script>
+
+<body>
+
+
+    <section>
+        <article class="sidebar">
+            <div class="profileContainer">
+                <img class="profilePic" src="" alt="Profile Image">
+                <br>
+                <span>Name</span>
+            </div>
+            <nav>
+                <div class="navele">Home</div>
+                <div class="navele">Leader Board</div>
+                <div class="navele" style="color: gold;">Elite</div>
+                <div class="navele" style="color:red;">Sign Out</div>
+            </nav>
+        </article>
+        <article class="mainContent">
+            <div class="longTile"></div>
+            <div class="mainTile"></div>
+            <div class="midTile"></div>
+            <div class="smallTile"></div>
+            <div class="bigTile"></div>
+        </article>
+    </section>
+</body>
+<script src="scripts/index.js"></script>
+<script src="/__/firebase/init.js"></script>
+
+</html>

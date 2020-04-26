@@ -5,6 +5,18 @@
     <title>Wakanda Forever</title>
     <link rel="stylesheet" href="styles/mobile.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/7.14.2/firebase-auth.js"></script>
+    <script src="/__/firebase/7.14.2/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <meta name="google-signin-client_id" content="project-239297078868.apps.googleusercontent.com">
+    <script src="/__/firebase/init.js"></script>
 </head>
 
 <script>
@@ -32,7 +44,7 @@
         </div>
 
         <span>or</span>
-
+        <div class="g-signin2" data-onsuccess="onSignIn">Google Login</div>
     </div>
 </body>
 

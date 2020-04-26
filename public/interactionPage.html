@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wakanda Forever</title>
+    <link rel="stylesheet" href="styles/interaction.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://kit.fontawesome.com/35c1de7e70.js" crossorigin="anonymous"></script>
+    <meta name="google-signin-client_id"
+        content="239297078868-i5t67q1eekela8d19mlo03cfl6c9p8rq.apps.googleusercontent.com">
+</head>
+
+<script>
+    getDisplay = () => {
+        if (screen.width < 700) {
+            window.location = "mobileinteraction.html"
+        }
+    }
+    getDisplay()
+
+</script>
+
+<body>
+
+
+    <section>
+        <article class="sidebar">
+            <div class="profileContainer">
+                <img class="profilePic" src="" alt="Profile Image">
+                <br>
+                <span>Name</span>
+            </div>
+            <nav>
+                <div class="navele"><i class="fas fa-home"></i><span>Home</span></div>
+                <div class="navele"><i class="fas fa-hiking"></i><span>Challenges</span></div>
+                <div class="navele" style="color: gold;"><i class="fas fa-vr-cardboard"></i><span>VR Library</span>
+                </div>
+                <div class="navele" style="color:red;"><i class="fas fa-info"></i><span>Info walls</span></div>
+                <div class="navele" style="color:red;"><i class="fas fa-crown"></i><span>leader Board</span></div>
+            </nav>
+        </article>
+        <article class="mainContent">
+            <div class="longTile"></div>
+            <div class="mainTile"></div>
+            <div class="midTile"></div>
+            <div class="smallTile"></div>
+            <div class="bigTile"></div>
+        </article>
+    </section>
+</body>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCuBU17sbHiGOrb5CaWUFsGdEVaQsQ-vcM",
+        authDomain: "e-wakanda.firebaseapp.com",
+        databaseURL: "https://e-wakanda.firebaseio.com",
+        projectId: "e-wakanda",
+        storageBucket: "e-wakanda.appspot.com",
+        messagingSenderId: "239297078868",
+        appId: "1:239297078868:web:4e34d8c5912acda632afc1",
+        measurementId: "G-W73F38QWKD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+<script src="scripts/interaction.js"></script>
+
+
+</html>
