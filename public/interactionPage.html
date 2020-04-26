@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
@@ -32,27 +32,56 @@
     <section>
         <article class="sidebar">
             <div class="profileContainer">
+                <i class="fas fa-user"></i>
                 <img class="profilePic" src="" alt="Profile Image">
                 <br>
-                <span>Name</span>
+                <span>Udit</span>
             </div>
             <nav>
-                <div class="navele"><i class="fas fa-home"></i><span>Home</span></div>
+                <div class="navele"><i class="fas fa-home" style="color: greenyellow;"></i><span
+                        style="color: greenyellow;">Home</span></div>
                 <div class="navele"><i class="fas fa-hiking"></i><span>Challenges</span></div>
-                <div class="navele" style="color: gold;"><i class="fas fa-vr-cardboard"></i><span>VR Library</span>
+                <div class="navele"><i class="fas fa-vr-cardboard"></i><span>VR Library</span>
                 </div>
-                <div class="navele" style="color:red;"><i class="fas fa-info"></i><span>Info walls</span></div>
-                <div class="navele" style="color:red;"><i class="fas fa-crown"></i><span>leader Board</span></div>
+                <div class="navele"><i class="fas fa-info"></i><span>Info walls</span></div>
+                <div class="navele"><i class="fas fa-crown"></i><span>leader Board</span></div>
             </nav>
         </article>
         <article class="mainContent">
-            <div class="longTile"></div>
-            <div class="mainTile"></div>
-            <div class="midTile"></div>
-            <div class="smallTile"></div>
-            <div class="bigTile"></div>
+            <div class="row1">
+                <div class="longTile"><img src="https://img.icons8.com/cotton/64/000000/sunrise--v1.png" /><span>Good
+                        Morning, Udit<span></div>
+                <div class="mainTile"><img src="resources/images/chorizo-mozarella-gnocchi-bake-cropped.jpg">
+                    <div class="mainTileDes"><span class="tileHead">Food Challenge</span><br><span class="tiledes"> Take
+                            a
+                            picture of organic
+                            produce</span>
+                        <Button><i class="fas fa-camera"></i></Button>
+                    </div>
+                </div>
+
+                <div class="midTile">
+                    <img src="resources/images/growth.jpg">
+                </div>
+            </div>
+            <div class="row2">
+                <div class="smallTile"><img src="resources/images/ant.jpg">
+                    <div class="smallTileDes"><span class="tileHead">Animal Kingdom Challenge</span><br></div>
+                </div>
+                <div class="smallTile"><img src="resources/images/leaf.jpg">
+                    <div class="smallTileDes"><span class="tileHead">Leaf Challenge</span><br></div>
+                </div>
+                <div class="smallTile"><img src="resources/images/plant.jpg">
+                    <div class="smallTileDes"><span class="tileHead">Plant Challenge</span><br></div>
+                </div>
+            </div>
+            <div class="row3">
+                <div class="bigTile"><img></div>
+            </div>
+
         </article>
     </section>
+    <div class="backgroundBox"></div>
 </body>
 <script>
     // Your web app's Firebase configuration

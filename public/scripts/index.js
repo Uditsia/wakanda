@@ -6,9 +6,9 @@ function onSignIn(googleUser) {
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
 
-firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
+
+
+document.querySelector(".loginbtn").addEventListener("click", function () {
+    window.location = "interactionpage.html";
 });
+

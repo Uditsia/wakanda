@@ -5,15 +5,10 @@
     <title>Wakanda Forever</title>
     <link rel="stylesheet" href="styles/index.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="/__/firebase/7.14.2/firebase-app.js"></script>
-
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
-
-    <!-- Add Firebase products that you want to use -->
-    <script src="/__/firebase/7.14.2/firebase-auth.js"></script>
-    <script src="/__/firebase/7.14.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
     <meta name="google-signin-client_id"
         content="239297078868-i5t67q1eekela8d19mlo03cfl6c9p8rq.apps.googleusercontent.com">
 </head>
@@ -50,14 +45,29 @@
             <label for="pass" class="formlabel"> Password</label>
             <input id="pass" type="password" placeholder="password">
         </div>
-        <button class="loginbtn">Login</button>
+        <button class="loginbtn" onclick="alert">Login</button>
         <span class="formlabel">or</span>
         <div class="googlebtn">
             <div class="g-signin2" data-onsuccess="onSignIn">Google Login</div>
         </div>
     </div>
 </body>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCuBU17sbHiGOrb5CaWUFsGdEVaQsQ-vcM",
+        authDomain: "e-wakanda.firebaseapp.com",
+        databaseURL: "https://e-wakanda.firebaseio.com",
+        projectId: "e-wakanda",
+        storageBucket: "e-wakanda.appspot.com",
+        messagingSenderId: "239297078868",
+        appId: "1:239297078868:web:4e34d8c5912acda632afc1",
+        measurementId: "G-W73F38QWKD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
 <script src="scripts/index.js"></script>
-<script src="/__/firebase/init.js"></script>
 
 </html>
