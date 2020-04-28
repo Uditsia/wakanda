@@ -171,12 +171,13 @@ nav{
     width: 20%;
     height: 40%;
     background-color: white;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
     padding: 1%;
-    
+    border-radius: 2%;
 }
 .smallTile img{
     height: 100%;
-    width: 35%;
+    width: 20%;
 }
 .smallTile .tiledes{
     width: 60%;
@@ -186,4 +187,26 @@ nav{
 }
 .row3{
     height: 26%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.imageViewer{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index:4;
+    left:200px;
+    display: none;
+}
+.imageViewer img{
+    display: none;
+}
+.bigTile{
+    width: 60%;
+    height: 100%;
+}
+.bigTile img{
+
 }

@@ -3,40 +3,36 @@ function onSignIn(googleUser) {
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    console.log('Email: ' + profile.getEmail());
 }
-var auth2;
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        console.log(`${user} Signed in`)
+    } else {
+        window.location = "index.html";
+    }
+});
+let imgArry = ["resources/images/challage1.jpeg", "resources/images/challage4.jpeg", "resources/images/challage3.jpeg", "resources/images/challage2.jpeg"]
+let img = document.querySelector(".sliderImg");
+let i = 0;
 
-/**
- * Initializes the Sign-In client.
- */
-var initClient = function () {
-    gapi.load('auth2', function () {
-        /**
-         * Retrieve the singleton for the GoogleAuth library and set up the
-         * client.
-         */
-        auth2 = gapi.auth2.init({
-            client_id: 'CLIENT_ID.apps.googleusercontent.com'
-        });
+img.addEventListener("click", function (e) {
+    img.src = `${imgArry[i++]}`;
+    e.stopPropagation();
+});
 
-        // Attach the click handler to the sign-in button
-        auth2.attachClickHandler('signin-button', {}, onSuccess, onFailure);
-    });
-};
+let flag = false;
+document.querySelector(".Challenge"), addEventListener("click", function () {
+    let imageViewer = document.querySelector(".imageViewer");
+    let img = document.querySelector(".sliderImg");
+    if (flag === false) {
+        img.style = "display:inline-block;";
+        imageViewer.style = "display:inline-block;";
+        flag = true;
+    } else {
+        img.style = "display:none;";
+        imageViewer.style = "display:none;";
+        flag = false;
+    }
 
-/**
- * Handle successful sign-ins.
- */
-var onSuccess = function (user) {
-    console.log('Signed in as ' + user.getBasicProfile().getName());
-};
-
-/**
- * Handle sign-in failures.
- */
-var onFailure = function (error) {
-    console.log(error);
-};
-
-initClient();
+});
