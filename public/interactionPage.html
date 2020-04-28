@@ -23,6 +23,28 @@
         }
     }
     getDisplay()
+    var firebaseConfig = {
+        apiKey: "AIzaSyCuBU17sbHiGOrb5CaWUFsGdEVaQsQ-vcM",
+        authDomain: "e-wakanda.firebaseapp.com",
+        databaseURL: "https://e-wakanda.firebaseio.com",
+        projectId: "e-wakanda",
+        storageBucket: "e-wakanda.appspot.com",
+        messagingSenderId: "239297078868",
+        appId: "1:239297078868:web:4e34d8c5912acda632afc1",
+        measurementId: "G-W73F38QWKD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            console.log(user)
+            console.log(`${user} Signed in`)
+        } else {
+            window.location = "index.html";
+        }
+    });
 
 </script>
 
@@ -82,22 +104,7 @@
     </section>
     <div class="backgroundBox"></div>
 </body>
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyCuBU17sbHiGOrb5CaWUFsGdEVaQsQ-vcM",
-        authDomain: "e-wakanda.firebaseapp.com",
-        databaseURL: "https://e-wakanda.firebaseio.com",
-        projectId: "e-wakanda",
-        storageBucket: "e-wakanda.appspot.com",
-        messagingSenderId: "239297078868",
-        appId: "1:239297078868:web:4e34d8c5912acda632afc1",
-        measurementId: "G-W73F38QWKD"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-</script>
+
 <script src="scripts/interaction.js"></script>
 
 

@@ -1,11 +1,23 @@
 
+
+
+
 var provider = new firebase.auth.GoogleAuthProvider();
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail());
+    window.location = "interactionPage.html";
+}
 
 // firebase.auth().signInWithPopup(provider).then(function (result) {
 //     // This gives you a Google Access Token. You can use it to access the Google API.
 //     var token = result.credential.accessToken;
 //     // The signed-in user info.
 //     var user = result.user;
+
 //     // ...
 // }).catch(function (error) {
 //     // Handle Errors here.
@@ -22,7 +34,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         window.location = "interactionPage.html";
     } else {
-        window.location = "index.html";
+        console.log("Not Signed in")
     }
 });
 
