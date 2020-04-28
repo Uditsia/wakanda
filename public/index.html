@@ -9,9 +9,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id"
-        content="239297078868-i5t67q1eekela8d19mlo03cfl6c9p8rq.apps.googleusercontent.com">
+
 </head>
 
 <script>
@@ -46,11 +44,9 @@
             <label for="pass" class="formlabel"> Password</label>
             <input id="pass" type="password" placeholder="password">
         </div>
-        <button class="loginbtn" onclick="alert">Login</button>
-        <span class="formlabel">Login and Sign up With Google</span>
-        <div class="googlebtn">
-            <div class="g-signin2" data-onsuccess="onSignIn">Google Login</div>
-        </div>
+        <button class="loginbtn">Login</button>
+        <span class="formlabel">Login and Sign up with Google</span>
+        <button class="googleLogin"></button>
     </div>
 </body>
 <script>

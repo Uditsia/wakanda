@@ -119,7 +119,15 @@ body{
     border-radius: 2%;
     font-weight: bold;
 }
-.googlebtn{
-    z-index: 3;
-    color: black !important;
+
+.googleLogin
+{
+    border: none;
+    width: 30%;
+    height: 10%;
+    background-image: url("../resources/images/dd.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    cursor: pointer;
 }

@@ -12,8 +12,7 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
     <script src="https://kit.fontawesome.com/35c1de7e70.js" crossorigin="anonymous"></script>
-    <meta name="google-signin-client_id"
-        content="239297078868-i5t67q1eekela8d19mlo03cfl6c9p8rq.apps.googleusercontent.com">
+
 </head>
 
 <script>
@@ -23,28 +22,7 @@
         }
     }
     getDisplay()
-    var firebaseConfig = {
-        apiKey: "AIzaSyCuBU17sbHiGOrb5CaWUFsGdEVaQsQ-vcM",
-        authDomain: "e-wakanda.firebaseapp.com",
-        databaseURL: "https://e-wakanda.firebaseio.com",
-        projectId: "e-wakanda",
-        storageBucket: "e-wakanda.appspot.com",
-        messagingSenderId: "239297078868",
-        appId: "1:239297078868:web:4e34d8c5912acda632afc1",
-        measurementId: "G-W73F38QWKD"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
 
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            console.log(user)
-            console.log(`${user} Signed in`)
-        } else {
-            window.location = "index.html";
-        }
-    });
 
 </script>
 
@@ -61,11 +39,12 @@
             <nav>
                 <div class="navele"><i class="fas fa-home" style="color: greenyellow;"></i><span
                         style="color: greenyellow;">Home</span></div>
-                <div class="navele Challenge"><i class="fas fa-hiking"></i><span>Challenges</span></div>
+                <div class="navele challenge"><i class="fas fa-hiking"></i><span>Challenges</span></div>
                 <div class="navele"><i class="fas fa-vr-cardboard"></i><span>VR Library</span>
                 </div>
                 <div class="navele"><i class="fas fa-info"></i><span>Geo Camp</span></div>
                 <div class="navele"><i class="fas fa-crown"></i><span>leader Board</span></div>
+                <div class="navele power"><i class="fas fa-power-off"></i><span>Log out</span></div>
             </nav>
         </article>
         <article class="mainContent">
@@ -104,8 +83,21 @@
     </section>
     <div class="backgroundBox"></div>
 </body>
-
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyCuBU17sbHiGOrb5CaWUFsGdEVaQsQ-vcM",
+        authDomain: "e-wakanda.firebaseapp.com",
+        databaseURL: "https://e-wakanda.firebaseio.com",
+        projectId: "e-wakanda",
+        storageBucket: "e-wakanda.appspot.com",
+        messagingSenderId: "239297078868",
+        appId: "1:239297078868:web:4e34d8c5912acda632afc1",
+        measurementId: "G-W73F38QWKD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
 <script src="scripts/interaction.js"></script>
-
 
 </html>
