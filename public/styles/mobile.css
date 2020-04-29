@@ -12,7 +12,7 @@ body{
     flex-direction: row;
     justify-content:space-around;
     overflow: hidden;
-    background-image: url("../resources/images/road_forest_top_view_127398_2560x1440.jpg");
+    background-image: url("../resources/images/road_forest_top_view_127398_2560x1440-min.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,4 +108,15 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+.googleLogin
+{
+    border: none;
+    width: 80%;
+    height: 10%;
+    background-image: url("../resources/images/dd.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    cursor: pointer;
 }

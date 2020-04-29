@@ -18,7 +18,7 @@ let i = 0;
 
 
 let flag = false;
-document.querySelector(".challenge"), addEventListener("click", function () {
+document.querySelector("#challenge"), addEventListener("click", function () {
     let imageViewer = document.querySelector(".imageViewer");
     let img = document.querySelector(".sliderImg");
     if (flag === false) {

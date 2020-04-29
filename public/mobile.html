@@ -6,17 +6,12 @@
     <link rel="stylesheet" href="styles/mobile.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="/__/firebase/7.14.2/firebase-app.js"></script>
-
-    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-    <script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
-
-    <!-- Add Firebase products that you want to use -->
-    <script src="/__/firebase/7.14.2/firebase-auth.js"></script>
-    <script src="/__/firebase/7.14.2/firebase-firestore.js"></script>
-    <script src="/__/firebase/init.js"></script>
-    <meta name="google-signin-client_id" content="project-239297078868.apps.googleusercontent.com">
-    <script src="/__/firebase/init.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://kit.fontawesome.com/35c1de7e70.js" crossorigin="anonymous"></script>
 </head>
 
 <script>
@@ -42,10 +37,26 @@
             <label for="pass"> Password</label>
             <input id="pass" type="password" placeholder="password">
         </div>
-
-        <span>or</span>
-        <div class="g-signin2" data-onsuccess="onSignIn">Google Login</div>
+        <button class="loginbtn">Login</button>
+        <span class="formlabel">or</span>
+        <button class="googleLogin"></button>
     </div>
 </body>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyCuBU17sbHiGOrb5CaWUFsGdEVaQsQ-vcM",
+        authDomain: "e-wakanda.firebaseapp.com",
+        databaseURL: "https://e-wakanda.firebaseio.com",
+        projectId: "e-wakanda",
+        storageBucket: "e-wakanda.appspot.com",
+        messagingSenderId: "239297078868",
+        appId: "1:239297078868:web:4e34d8c5912acda632afc1",
+        measurementId: "G-W73F38QWKD"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+<script src="scripts/index.js"></script>
 
 </html>

@@ -17,8 +17,8 @@
 
 <script>
     getDisplay = () => {
-        if (screen.width < 700) {
-            window.location = "mobileinteraction.html"
+        if (screen.width > 700) {
+            window.location = "interaction.html"
         }
     }
     getDisplay()
@@ -39,7 +39,7 @@
             <nav>
                 <div class="navele"><i class="fas fa-home" style="color: greenyellow;"></i><span
                         style="color: greenyellow;">Home</span></div>
-                <div class="navele challenge"><i class="fas fa-hiking"></i><span>Challenges</span></div>
+                <div class="navele challenge" id="challenge"><i class="fas fa-hiking"></i><span>Challenges</span></div>
                 <div class="navele"><i class="fas fa-vr-cardboard"></i><span>VR Library</span>
                 </div>
                 <div class="navele"><i class="fas fa-info"></i><span>Geo Camp</span></div>
